@@ -1,3 +1,6 @@
+#Dimas Bagus Pratama
+#2606681
+
 #latihan 1
 #1
 def fibonacci(n):
