@@ -25,31 +25,31 @@ def volTab(r,t,p = 22/7):
 print(volTab(7,10))
 
 #3
-inputAngka= []
-
 def nilaiTotal(*angka):
-    total = sum(angka)
-    return total
+    return sum(angka)
 
 def nilaiRataRata(*angka):
-    total = sum(angka)
-    jumlahAngka = len(angka)
-    rataRata = total / jumlahAngka
-    return rataRata
+    return sum(angka) / len(angka)
 
-jumlahAngka = int(input('Masukan jumlah angka yang diinginkan: '))
+inputAngka = []
 
-for i in range(jumlahAngka):
-    inputAngka.append(int(input(f"Masukan Angka ke {i+1} : ")))
-    
-print(f"Total : {nilaiTotal(*inputAngka)}")
-print(f"Rata-rata : {nilaiRataRata(*inputAngka)}")
+while True:
+    masukan = input("Masukkan angka (ketik 'selesai' untuk berhenti): ")
+    if masukan.lower() == "selesai":
+        break
+    inputAngka.append(int(masukan))
+
+if len(inputAngka) > 0:
+    print(f"Total : {nilaiTotal(*inputAngka)}")
+    print(f"Rata-rata : {nilaiRataRata(*inputAngka)}")
+else:
+    print("Belum ada angka yang dimasukkan.")
 
 #latihan 2
 passwordAsli = "Latihan"
 kesempatan = 3
 
-print("=== MENU LOGIN ===")
+print("Menu Login SMAN 2 Harapan")
 
 while kesempatan > 0:
     username = input("Username: ")
