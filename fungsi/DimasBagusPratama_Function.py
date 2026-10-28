@@ -43,12 +43,35 @@ print(f"Total : {nilaiTotal(*inputAngka)}")
 print(f"Rata-rata : {nilaiRataRata(*inputAngka)}")
 
 #latihan 2
+passwordAsli = "Latihan"
+kesempatan = 3
+
+print("=== MENU LOGIN ===")
+
+while kesempatan > 0:
+    username = input("Username: ")
+    password = input("Password: ")
+
+    if password == passwordAsli:
+        print("Login berhasil dilakukan, Selamat Datang", username)
+        break
+    else:
+        kesempatan -= 1
+        if kesempatan > 0:
+            print(f"Password salah! Sisa kesempatan anda adalah: {kesempatan}\n")
+        else:
+            print("Password yang Anda masukkan salah untuk ketiga kalinya dan Anda dikeluarkan dari menu login.")
 
 #latihan 3
 def lari(j,m,d,jS, mS, dS):
-    selisihjam = jS - j
-    selisihmenit = mS - m
-    selisihdetik = dS - d
+    mulai = j * 3600 + m * 60 + d
+    selesai = jS * 3600 + mS * 60 + dS
+    selisih = selesai - mulai
+    if selisih < 0 :
+        selisih += 24 * 3600
+    selisihjam = selisih // 3600
+    selisihmenit = (selisih % 3600) // 60
+    selisihdetik = selisih % 60
     print(f"{selisihjam} jam - {selisihmenit} menit -  {selisihdetik} detik")
 
 print("Input mulai: ")
