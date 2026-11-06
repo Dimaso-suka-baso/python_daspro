@@ -2,7 +2,7 @@
 #Dimas Bagus Pratama
 #2606681
 
-buah = ["apel", "jeruk", "ceri", "durian", "apel", "mangga"]
+buah = ["mangga", "jeruk", "durian", "jambu", "sawit", "mangga"]
 
 #1
 buah[2] = "cherry"

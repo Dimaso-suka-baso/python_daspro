@@ -3,5 +3,14 @@
 #2606681
 
 #input 10 teman sekaligus
-listTeman = input("masukkan nama teman anda: ").split(", ")
+listTeman = []
+
+while True : 
+    listTeman = input("masukkan nama teman anda: ").split(", ")
+
+    if len(listTeman) < 10 :
+        print("Nama teman yang anda masukkan kurang")
+    else : 
+        break
+
 print(f"List 10 nama teman: \n{listTeman}")
