@@ -17,7 +17,7 @@ nim = input("Masukkan NIM: ")
 prodi = input("Masukkan prodi: ")
 
 print("=====================" *len(nama))
-print(f"\nSelamat datang {nama.strip} \ndengan nim {nim} \ndari prodi {prodi}")
+print(f"\nSelamat datang {nama.strip()} \ndengan nim {nim} \ndari prodi {prodi}")
 print(type(nama))
 
 
